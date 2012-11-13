@@ -1,0 +1,131 @@
+/* line 3, scss/screen.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, scss/screen.scss */
+body {
+  background: #000;
+}
+
+/* line 12, scss/screen.scss */
+.page-wrapper {
+  width: 984px;
+  margin: 0 auto;
+}
+
+/* line 17, scss/screen.scss */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 23, scss/screen.scss */
+.carousel .carousel_section {
+  position: relative;
+  white-space: nowrap;
+  left: 0;
+  line-height: 0;
+  font-size: 0;
+}
+/* line 30, scss/screen.scss */
+.carousel .carousel_section .article {
+  width: 100%;
+  display: inline;
+  display: inline-block;
+}
+/* line 35, scss/screen.scss */
+.carousel .carousel_section .article img {
+  width: 100%;
+  vertical-align: bottom;
+}
+/* line 42, scss/screen.scss */
+.carousel .carousel_nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  width: 30%;
+}
+/* line 49, scss/screen.scss */
+.carousel .carousel_nav .inner {
+  display: table;
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 59, scss/screen.scss */
+.carousel .carousel_nav label {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 20%;
+  border-top: 1px dotted rgba(0, 0, 0, 0.2);
+}
+/* line 66, scss/screen.scss */
+.carousel .carousel_nav label:first-child {
+  border-top: 0;
+}
+/* line 70, scss/screen.scss */
+.carousel .carousel_nav label.active, .carousel .carousel_nav label:hover {
+  cursor: pointer;
+}
+/* line 73, scss/screen.scss */
+.carousel .carousel_nav label.active .text, .carousel .carousel_nav label:hover .text {
+  color: #ff6600;
+}
+/* line 77, scss/screen.scss */
+.carousel .carousel_nav label.active .thumb, .carousel .carousel_nav label:hover .thumb {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+/* line 83, scss/screen.scss */
+.carousel .carousel_nav label .text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 80%;
+  padding: 10px 10px 10px 20px;
+  font-family: Rockwell, sans-serif;
+  font-size: 16px;
+  color: #999;
+  line-height: 1;
+}
+/* line 96, scss/screen.scss */
+.carousel .carousel_nav label .thumb {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  width: 20%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+  opacity: 0.25;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}

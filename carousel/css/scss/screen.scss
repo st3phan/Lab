@@ -1,0 +1,108 @@
+@import "compass/css3";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #000;
+}
+
+.page-wrapper {
+	width: 984px;
+	margin: 0 auto;
+}
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	@include border-radius(3px);
+	
+	.carousel_section {
+		position: relative;
+		white-space: nowrap;
+		left: 0;
+		line-height: 0;
+		font-size: 0;
+		
+		.article {
+			width: 100%;
+			display: inline;
+			display: inline-block;
+			
+			img {
+				width: 100%;
+				vertical-align: bottom;
+			}
+		}
+	}
+	
+	.carousel_nav {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		bottom: 10px;
+		width: 30%;
+			
+		.inner {
+			display: table;
+			overflow: hidden;
+			clear: both;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			@include border-radius(3px);
+		}
+		
+		label {
+			position: relative;
+			display: table;
+			width: 100%;
+			height: 20%;
+			border-top: 1px dotted rgba(0,0,0,.2);
+			
+			&:first-child {
+				border-top: 0;
+			}
+			
+			&.active, &:hover {
+				cursor: pointer;
+				
+				.text {
+					color: #ff6600;
+				}
+				
+				.thumb {
+					@include opacity(1);
+					@include transition(opacity .4s);
+				}
+			}
+            
+            .text {
+            	@include box-sizing(border-box);
+                position: relative;
+				display: table-cell; 
+				vertical-align: middle; 
+                width: 80%;
+                padding: 10px 10px 10px 20px;
+                font-family: Rockwell, sans-serif;
+                font-size: 16px;
+                color: #999;
+                line-height: 1;
+            }
+			
+			.thumb {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				bottom: 10px;
+				width: 20%;
+				@include background-size(cover);
+				@include opacity(.25);
+				@include transition(opacity .4s);
+			}
+		}
+	}
+}
